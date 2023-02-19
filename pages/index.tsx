@@ -11,7 +11,7 @@ function HomePage() {
 
   Install with npm:
  ~~~sh
-  npm i react-pkg-demo
+  npm i react-pkg-demo -D
  ~~~
 
 

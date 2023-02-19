@@ -9,7 +9,7 @@ A component for quickly throwing together a react package demo
 Install with npm:
 
 ```sh
- npm i react-pkg-demo
+ npm i react-pkg-demo -D
 ```
 
 ## Usage
