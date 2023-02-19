@@ -12,6 +12,23 @@ Install with npm:
  npm i react-pkg-demo
 ```
 
+## Usage
+
+```js
+import PkgDemo from 'react-pkg-demo'
+...
+<PkgDemo
+      color={"CBC3E3"}
+      packageName={"react-pkg-demo"}
+      icon={"⬇️"}
+      markdown={"Some markdown content"}
+      prompt={"Edit the code below and try it out!"}
+      code={
+        "() => <button onClick={() => alert('It works!')}>test button</button>"
+      }
+    />
+```
+
 ## Properties
 
 color: string;
