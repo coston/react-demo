@@ -23,7 +23,7 @@ function HomePage() {
   | color       | string        | required    | Theme color                               |
   | code        | string        | required    | Live code                                 |
   | icon        | string        | optional    | Decorative icon                           |
-  | scope       | [componenets] | optional    | Any component in the demo code            |
+  | scope       | [components] | optional    | Any component in the demo code            |
   | prompt      | string        | required    | Text in demo to prompt the user to try it |
 
   ## Contributing
