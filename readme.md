@@ -1,4 +1,4 @@
-# @coston/react-demo
+# react-pkg-demo
 
 ## Features
 
@@ -9,7 +9,7 @@ A component for quickly throwing together a react package demo
 Install with npm:
 
 ```sh
- npm i @coston/react-demo
+ npm i react-pkg-demo
 ```
 
 ## Properties
