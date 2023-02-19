@@ -2,7 +2,7 @@
 
 ## Features
 
-A component to quickly push out a demo application
+A component for quickly throwing together a react package demo
 
 ## Install
 
