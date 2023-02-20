@@ -17,14 +17,15 @@ function HomePage() {
 
   ## Properties
 
-  | Property    | Type          | Requirement | Description                               |
-  | ----------- | ------------- | ----------- | ----------------------------------------- |
-  | packageName | string        | required    | Name of package being demonstrated        |
-  | color       | string        | required    | Theme color                               |
-  | code        | string        | required    | Live code                                 |
-  | icon        | string        | optional    | Decorative icon                           |
-  | scope       | [components] | optional    | Any component in the demo code            |
-  | prompt      | string        | required    | Text in demo to prompt the user to try it |
+  | Property    | Type         | Requirement | Description                                     |
+  | ----------- | ------------ | ----------- | ----------------------------------------------- |
+  | packageName | string       | required    | Name of package being demonstrated              |
+  | color       | string       | required    | Theme color                                     |
+  | code        | string       | required    | Live code                                       |
+  | scope       | {components} | optional    | Any component in the demo code                  |
+  | icon        | string       | optional    | Decorative icon                                 |
+  | prompt      | string       | optional    | Text in demo to prompt the user to try it       |
+  | content     | string       | optional    | Markdown content (e.g. copied from your readme) |
 
   ## Contributing
   This is project that supports other packages developed by [Coston](https://github.com/coston). Feel free to contribute and make it better!
