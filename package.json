@@ -3,13 +3,14 @@
   "version": "0.1.4",
   "description": "A component for quickly throwing together a react package demo",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "files": [
-    "dist/**"
+    "dist"
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && cp package.json README.md ./dist",
+    "build": "npm run clean && tsc",
     "dev": "next dev",
     "build-site": "next build",
     "start": "next start",
@@ -28,6 +29,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "next": "^13.1.6",

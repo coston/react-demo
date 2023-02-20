@@ -27,7 +27,7 @@ function HomePage() {
   | prompt      | string        | required    | Text in demo to prompt the user to try it |
 
   ## Contributing
-  This is mostly a personal project, but feel free to contribute and make it better!
+  This is project that supports other packages developed by [Coston](https://github.com/coston). Feel free to contribute and make it better!
   `;
 
   return (

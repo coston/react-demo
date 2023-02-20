@@ -1,3 +1,1 @@
-import { Composite } from "./composite";
-
-export default Composite;
+export { Composite as default } from "./composite";

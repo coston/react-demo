@@ -1,3 +1,4 @@
+import React from "react";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
 const LiveSection = ({ code, scope, color, prompt }: LiveSectionTypes) => {
