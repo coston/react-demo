@@ -24,34 +24,24 @@ function Layout({
           __html: styles(color),
         }}
       />
-      <div>
         <h1>{titleHeader}</h1>
-        <p>
-          <a
-            href={`https://www.npmjs.com/package/${packageName}`}
-            rel="noopener"
-            style={{ borderBottom: "none", marginRight: "5px" }}
-            target="_blank"
-          >
-            <img
-              alt="npm version"
-              src={`https://badge.fury.io/js/${packageName}.svg`}
-            />
-          </a>
-          <a
-            href={`https://www.npmjs.com/package/${packageName}`}
-            rel="noopener"
-            style={{ borderBottom: "none", marginRight: "5px" }}
-            target="_blank"
-          >
-            <img
-              alt="npm"
-              src={`https://img.shields.io/npm/dm/${packageName}.svg`}
-            />
-          </a>
-        </p>
+        <div>
+          {["npm version", "npm"].map((text, index) => (
+            <a
+              href={`https://www.npmjs.com/package/${packageName}`}
+              key={text}
+              rel="noopener"
+              style={{ borderBottom: "none", marginRight: "5px" }}
+              target="_blank"
+            >
+              <img
+                alt={text}
+                src={`https://img.shields.io/npm/${index === 0 ? 'v' : 'dm'}/${packageName}.svg`}
+              />
+            </a>
+          ))}
+        </div>
         {children}
-      </div>
     </>
   );
 }
