@@ -1,10 +1,15 @@
 import React from "react";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
-const LiveSection = ({ code, scope, color, prompt }: LiveSectionTypes) => {
+function LiveSection({
+  code,
+  scope,
+  color,
+  prompt,
+}: LiveSectionTypes): JSX.Element {
   const theme /*: PrismTheme */ = {
     plain: {
-      color: color,
+      color,
     },
     styles: [
       {
@@ -33,34 +38,32 @@ const LiveSection = ({ code, scope, color, prompt }: LiveSectionTypes) => {
       >
         <div>
           <h2>Live Demo</h2>
-          {prompt && <p>{prompt}</p>}
+          {prompt ? <p>{prompt}</p> : null}
           <LivePreview />
         </div>
       </div>
-      <h2>Code Usage</h2>
+      <h2>Live Code Example</h2>
       <div style={{ border: "5px dashed black" }}>
         <LiveEditor
-          theme={theme}
           style={{
             background: "black",
+            fontFamily: "monospace",
+            whiteSpace: "pre",
             overflow: "scroll",
           }}
+          theme={theme}
         />
         <LiveError />
       </div>
     </LiveProvider>
   );
-};
+}
 
-export type LiveSectionTypes = {
+export interface LiveSectionTypes {
   code: string;
-  scope?:
-    | {
-        [key: string]: any;
-      }
-    | undefined;
+  scope?: Record<string, unknown> | undefined;
   color: string;
   prompt?: string;
-};
+}
 
 export default LiveSection;
