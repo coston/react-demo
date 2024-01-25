@@ -1,35 +1,12 @@
-# Logs
-logs
-*.log
-
-# Runtime data
-pids
-*.pid
-*.seed
-
-# Coverage tools
-lib-cov
-coverage
-coverage.html
-.cover*
-
-# Dependency directory
+.DS_Store
 node_modules
-
-# Example build directory
-public
-.publish
-
-# Editor and other tmp files
-*.swp
-*.un~
-*.iml
-*.ipr
-*.iws
-*.sublime-*
-.idea/
-*.DS_Store
+.turbo
+*.log
 .next
-out
 dist
-lib
+dist-ssr
+*.local
+.env
+.cache
+server/dist
+public/dist

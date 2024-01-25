@@ -1,8 +1,15 @@
+"use client";
+
 import React from "react";
-import Demo from "../src";
+import Demo from "react-pkg-demo";
+
+function Button({ ...rest }) {
+  return <button style={{ background: "white" }} {...rest} />;
+}
 
 function HomePage() {
   const color = "#CBC3E3";
+
   const content = `
 ## Features
  A component to quickly push out a demo application
@@ -36,11 +43,10 @@ function HomePage() {
       color={color}
       packageName={"react-pkg-demo"}
       icon={"⬇️"}
+      scope={{ Button }}
       markdown={content}
       prompt={"Edit the code below and try it out!"}
-      code={
-        "() => <button onClick={() => alert('It works!')}>test button</button>"
-      }
+      code={`() => <Button onClick={() => alert('It works!')}>test button</Button>`}
     />
   );
 }
