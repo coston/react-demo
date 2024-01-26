@@ -1,10 +1,11 @@
 {
   "name": "react-pkg-demo",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "A component for quickly throwing together a react package demo",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "type": "module",
   "sideEffects": false,
   "license": "MIT",
   "files": [
