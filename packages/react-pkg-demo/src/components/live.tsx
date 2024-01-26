@@ -1,5 +1,6 @@
 import React from "react";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import { Browser, Terminal } from "react-window-ui";
 
 function LiveSection({
   code,
@@ -39,11 +40,13 @@ function LiveSection({
         <div>
           <h2>Live Demo</h2>
           {prompt ? <p>{prompt}</p> : null}
-          <LivePreview />
+          <Browser>
+            <LivePreview />
+          </Browser>
         </div>
       </div>
       <h2>Live Code Example</h2>
-      <div style={{ border: "5px dashed black" }}>
+      <Terminal boxShadow="none">
         <LiveEditor
           style={{
             background: "black",
@@ -54,7 +57,7 @@ function LiveSection({
           theme={theme}
         />
         <LiveError />
-      </div>
+      </Terminal>
     </LiveProvider>
   );
 }
