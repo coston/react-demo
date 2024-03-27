@@ -2,6 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styles from "../styles";
 
+const NPM_BASE_URL = "https://www.npmjs.com/package";
+const SHIELDS_BASE_URL = "https://img.shields.io/npm";
+
 function Layout({
   children,
   packageName,
@@ -24,24 +27,25 @@ function Layout({
           __html: styles(color),
         }}
       />
-        <h1>{titleHeader}</h1>
-        <div>
-          {["npm version", "npm"].map((text, index) => (
-            <a
-              href={`https://www.npmjs.com/package/${packageName}`}
-              key={text}
-              rel="noopener"
-              style={{ borderBottom: "none", marginRight: "5px" }}
-              target="_blank"
-            >
-              <img
-                alt={text}
-                src={`https://img.shields.io/npm/${index === 0 ? 'v' : 'dm'}/${packageName}.svg`}
-              />
-            </a>
-          ))}
-        </div>
-        {children}
+      <h1>{titleHeader}</h1>
+      <section>
+        {["npm version", "npm"].map((text, index) => (
+          <a
+            href={`${NPM_BASE_URL}/${packageName}`}
+            key={text}
+            rel="noopener"
+            style={{ borderBottom: "none", marginRight: "5px" }}
+            target="_blank"
+            aria-label={`Link to ${text} of ${packageName} on npm`}
+          >
+            <img
+              alt={text}
+              src={`${SHIELDS_BASE_URL}/${index === 0 ? "v" : "dm"}/${packageName}.svg`}
+            />
+          </a>
+        ))}
+      </section>
+      {children}
     </>
   );
 }
