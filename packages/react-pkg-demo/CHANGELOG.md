@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- d308aa5: Add browser and terminal UI wrappers
+- 28c9ada: feat!: build demos from markdown
 
 ## 0.1.11
 
