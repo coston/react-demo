@@ -19,12 +19,19 @@ export function Composite({
       {markdown ? (
         <ReactMarkdown
           components={{
+            img: ({ node, ...props }) => (
+              <img
+                {...props}
+                style={{
+                  maxWidth: "100%",
+                }}
+              />
+            ),
             pre: "div", // Override pre element to prevent ReactMarkdown from wrapping code blocks in pre tags
             code: ({ node, inline, className, children, ...props }: any) => {
               const match = /language-(\w+)/.exec(className || "");
               const language = match ? match[1] : "";
               const code = String(children).replace(/\n$/, "");
-              console.log({ node, inline, className, children, props });
 
               if (node.position.start.line === node.position.end.line) {
                 return InlineCode({ children });
