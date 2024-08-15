@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.3.0
+
+### Minor Changes
+
+- f3464b1: fix: inline code snippets
+
 ## 0.2.1
 
 ### Patch Changes
