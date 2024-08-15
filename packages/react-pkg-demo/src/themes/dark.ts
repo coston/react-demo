@@ -127,9 +127,9 @@ export const monoDarkPrismTheme = (color: string): PrismTheme => ({
     },
   ],
 });
-export const monoDarkSyntaxTheme = (color: string) => ({
+export const monoDarkSyntaxTheme = {
   'code[class*="language-"]': {
-    color: color, // theme color for text
+    color: "#FFFFFF", // theme color for text
     background: "#000000",
     lineHeight: "1.5",
     direction: "ltr",
@@ -141,7 +141,7 @@ export const monoDarkSyntaxTheme = (color: string) => ({
     hyphens: "none",
   },
   'pre[class*="language-"]': {
-    color: color, // theme color for text
+    color: "#FFFFFF", // theme color for text
     background: "#000000",
     lineHeight: "1.5",
     direction: "ltr",
@@ -156,33 +156,33 @@ export const monoDarkSyntaxTheme = (color: string) => ({
     overflow: "auto",
     borderRadius: "0.3em",
   },
-  comment: { color: color }, // theme color for comments
-  prolog: { color: color }, // theme color for comments
-  doctype: { color: color }, // theme color for comments
-  cdata: { color: color }, // theme color for comments
+  comment: { color: "#FFFFFF" }, // theme color for comments
+  prolog: { color: "#FFFFFF" }, // theme color for comments
+  doctype: { color: "#FFFFFF" }, // theme color for comments
+  cdata: { color: "#FFFFFF" }, // theme color for comments
   punctuation: { color: "#808080" }, // grey for brackets and similar elements
   property: { color: "#808080" }, // grey for brackets and similar elements
   tag: { color: "#ffffff" }, // white for tags
-  boolean: { color: color }, // theme color for text
-  number: { color: color }, // theme color for text
-  constant: { color: color }, // theme color for text
-  symbol: { color: color }, // theme color for text
+  boolean: { color: "#FFFFFF" }, // theme color for text
+  number: { color: "#FFFFFF" }, // theme color for text
+  constant: { color: "#FFFFFF" }, // theme color for text
+  symbol: { color: "#FFFFFF" }, // theme color for text
   selector: { color: "#ffffff" }, // white for tags
   "attr-name": { color: "#ffffff" }, // white for tags
-  string: { color: color }, // theme color for text
-  char: { color: color }, // theme color for text
+  string: { color: "#FFFFFF" }, // theme color for text
+  char: { color: "#FFFFFF" }, // theme color for text
   builtin: { color: "#ffffff" }, // white for tags
   operator: { color: "#ffffff" }, // white for tags
   entity: { color: "#ffffff", cursor: "help" }, // white for tags
   url: { color: "#ffffff" }, // white for tags
   "attr-value": { color: "#808080" }, // grey for brackets and similar elements
   keyword: { color: "#ffffff" }, // white for tags
-  regex: { color: color }, // theme color for text
+  regex: { color: "#FFFFFF" }, // theme color for text
   important: { color: "#ffffff", fontWeight: "bold" }, // white for tags
-  variable: { color: color }, // theme color for text
-  inserted: { color: color }, // theme color for text
+  variable: { color: "#FFFFFF" }, // theme color for text
+  inserted: { color: "#FFFFFF" }, // theme color for text
   deleted: { color: "#ffffff" }, // white for tags
   italic: { fontStyle: "italic" },
   bold: { fontWeight: "bold" },
   namespace: { opacity: 0.7 },
-});
+};

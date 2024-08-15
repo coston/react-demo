@@ -4,6 +4,7 @@ import Live, { LiveSectionTypes } from "./Live";
 import Layout, { LayoutTypes } from "./Layout";
 import { monoDarkSyntaxTheme } from "../themes/dark";
 import CodeBlock from "./CodeBlock";
+import InlineCode from "./InlineCode";
 
 export function Composite({
   color,
@@ -18,20 +19,23 @@ export function Composite({
       {markdown ? (
         <ReactMarkdown
           components={{
-            pre: "div", // Override pre element
+            pre: "div", // Override pre element to prevent ReactMarkdown from wrapping code blocks in pre tags
             code: ({ node, inline, className, children, ...props }: any) => {
               const match = /language-(\w+)/.exec(className || "");
               const language = match ? match[1] : "";
-              const value = String(children).replace(/\n$/, "");
+              const code = String(children).replace(/\n$/, "");
+              console.log({ node, inline, className, children, props });
 
-              if (language === "jsx") {
-                return <Live code={value} color={color} scope={scope} />;
+              if (node.position.start.line === node.position.end.line) {
+                return InlineCode({ children });
+              } else if (language === "jsx") {
+                return <Live code={code} color={color} scope={scope} />;
               } else {
                 return (
                   <CodeBlock
-                    style={monoDarkSyntaxTheme("#ffffff")}
+                    style={monoDarkSyntaxTheme}
                     language={language}
-                    value={value}
+                    value={code}
                     {...props}
                   ></CodeBlock>
                 );
