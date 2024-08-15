@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.2.1
+
+### Patch Changes
+
+- 11a8d04: fix: layout elements
+
 ## 0.2.0
 
 ### Minor Changes
