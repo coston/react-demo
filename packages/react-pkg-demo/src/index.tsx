@@ -1,1 +1,1 @@
-export { Composite as default } from "./components/Composite";
+export { Composite as default } from "./components/tempComposite";
