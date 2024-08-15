@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Live, { LiveSectionTypes } from "./tempLive";
-import Layout, { LayoutTypes } from "./tempLayout";
+import Live, { LiveSectionTypes } from "./Live";
+import Layout, { LayoutTypes } from "./Layout";
 import { monoDarkSyntaxTheme } from "../themes/dark";
 import CodeBlock from "./CodeBlock";
 
