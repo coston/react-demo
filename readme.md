@@ -1,4 +1,7 @@
-# react-pkg-demo
+# ⬇️ react-pkg-demo
+
+[![npm version](https://img.shields.io/npm/v/react-pkg-demo.svg)](https://www.npmjs.com/package/react-pkg-demo)
+[![npm downloads](https://img.shields.io/npm/dm/react-pkg-demo.svg)](https://www.npmjs.com/package/react-pkg-demo)
 
 ## Features
 

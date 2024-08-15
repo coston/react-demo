@@ -20,24 +20,6 @@ function Layout({
           __html: styles(color),
         }}
       />
-      <h1>{icon ? `${icon} ${packageName}` : packageName}</h1>
-      <section>
-        {["npm version", "npm"].map((text, index) => (
-          <a
-            href={`https://www.npmjs.com/package/${packageName}`}
-            key={text}
-            style={{ borderBottom: "none", marginRight: "5px" }}
-            target="_blank"
-            rel="noopener"
-            aria-label={`Link to ${text} of ${packageName} on npm`}
-          >
-            <img
-              alt={text}
-              src={`https://img.shields.io/npm/${index === 0 ? "v" : "dm"}/${packageName}.svg`}
-            />
-          </a>
-        ))}
-      </section>
       {children}
     </>
   );
