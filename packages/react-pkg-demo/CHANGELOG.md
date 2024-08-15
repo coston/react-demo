@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.4.0
+
+### Minor Changes
+
+- e71405d: feat: max image width
+
 ## 0.3.0
 
 ### Minor Changes
