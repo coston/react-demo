@@ -9,24 +9,31 @@ A component for quickly throwing together a react package demo
 Install with npm:
 
 ```sh
- npm i react-pkg-demo -D
+npm i react-pkg-demo -D
 ```
 
 ## Usage
 
-```js
-import PkgDemo from 'react-pkg-demo'
-...
-<PkgDemo
-      color={"CBC3E3"}
+```jsx
+() => {
+  const markdown = `
+  ## Description
+  Wow, it's a live code demo!
+  ## Usage
+  ~~~jsx
+  () => <Button onClick={() => alert('It works!')}>test button</Button>
+  ~~~
+  `;
+  return (
+    <Demo
+      color={"#CBC3E3"}
       packageName={"react-pkg-demo"}
       icon={"⬇️"}
-      markdown={"Some markdown content"}
-      prompt={"Edit the code below and try it out!"}
-      code={
-        "() => <button onClick={() => alert('It works!')}>test button</button>"
-      }
+      scope={{ Button, Demo }}
+      markdown={markdown}
     />
+  );
+};
 ```
 
 ## Properties
@@ -35,12 +42,10 @@ import PkgDemo from 'react-pkg-demo'
 | ----------- | ------------ | ----------- | ----------------------------------------------- |
 | packageName | string       | required    | Name of package being demonstrated              |
 | color       | string       | required    | Theme color                                     |
-| code        | string       | required    | Live code                                       |
 | scope       | {components} | optional    | Any component in the demo code                  |
 | icon        | string       | optional    | Decorative icon                                 |
-| prompt      | string       | optional    | Text in demo to prompt the user to try it       |
-| content     | string       | optional    | Markdown content (e.g. copied from your readme) |
+| markdown    | string       | optional    | Markdown content (e.g. copied from your readme) |
 
 ## Contributing
 
-This is mostly a personal project, but feel free to contribute and make it better!
+Feel free to contribute to the project and make it better!
