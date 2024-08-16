@@ -5,6 +5,8 @@ import Layout, { LayoutTypes } from "./Layout";
 import { monoDarkSyntaxTheme } from "../themes/dark";
 import CodeBlock from "./CodeBlock";
 import InlineCode from "./InlineCode";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
 
 export function Composite({
   color,
@@ -19,7 +21,7 @@ export function Composite({
       {markdown ? (
         <ReactMarkdown
           components={{
-            img: ({ node, ...props }) => (
+            img: (props) => (
               <img
                 {...props}
                 style={{
@@ -36,7 +38,7 @@ export function Composite({
               if (node.position.start.line === node.position.end.line) {
                 return InlineCode({ children });
               } else if (language === "jsx") {
-                return <Live code={code} color={color} scope={scope} />;
+                return <Live code={code} scope={scope} />;
               } else {
                 return (
                   <CodeBlock
@@ -50,6 +52,7 @@ export function Composite({
             },
           }}
           remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
         >
           {markdown}
         </ReactMarkdown>
