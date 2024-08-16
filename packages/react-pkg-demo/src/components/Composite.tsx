@@ -14,7 +14,7 @@ export function Composite({
   markdown,
   icon,
   scope,
-}: LiveSectionTypes &
+}: Omit<LiveSectionTypes, "code"> &
   Omit<LayoutTypes, "children"> & { markdown?: string }): JSX.Element {
   return (
     <Layout color={color} icon={icon} packageName={packageName}>

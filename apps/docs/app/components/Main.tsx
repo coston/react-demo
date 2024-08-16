@@ -17,7 +17,6 @@ function HomePage({ content }: { content: string }) {
       icon={"⬇️"}
       scope={{ Button, Demo }}
       markdown={content}
-      code={`() => <Button onClick={() => alert('It works!')}>test button</Button>`}
     />
   );
 }
