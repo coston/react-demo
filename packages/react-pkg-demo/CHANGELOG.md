@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.5.0
+
+### Minor Changes
+
+- 758394e: feat: enable table of contents
+
 ## 0.4.0
 
 ### Minor Changes
