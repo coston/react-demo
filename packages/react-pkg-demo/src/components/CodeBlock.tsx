@@ -24,7 +24,11 @@ function CodeBlock({
       <SyntaxHighlighter style={style} language={language}>
         {value}
       </SyntaxHighlighter>
-      <button className="code-copy-button" onClick={handleCopy}>
+      <button
+        className="code-copy-button"
+        onClick={handleCopy}
+        aria-label={copied ? "Copied!" : "Copy to clipboard"}
+      >
         {copied ? (
           <svg
             aria-hidden="true"
