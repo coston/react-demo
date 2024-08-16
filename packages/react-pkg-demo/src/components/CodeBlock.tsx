@@ -1,19 +1,5 @@
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { CSSProperties } from "react";
-
-const copyButtonStyle: CSSProperties = {
-  position: "absolute",
-  top: "10px",
-  right: "10px",
-  background: "rgba(255, 255, 255, 0.2)",
-  border: "none",
-  color: "#fff",
-  padding: "5px 10px",
-  borderRadius: "5px",
-  cursor: "pointer",
-  transition: "background 0.3s",
-};
 
 function CodeBlock({
   style,
@@ -38,7 +24,7 @@ function CodeBlock({
       <SyntaxHighlighter style={style} language={language}>
         {value}
       </SyntaxHighlighter>
-      <button style={copyButtonStyle} onClick={handleCopy}>
+      <button className="code-copy-button" onClick={handleCopy}>
         {copied ? (
           <svg
             aria-hidden="true"

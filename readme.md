@@ -17,6 +17,9 @@ npm i react-pkg-demo -D
 
 ## Usage
 
+1. `import Demo from 'react-pkg-demo'`
+2. Inspire from the code example below.
+
 ```jsx
 () => {
   const markdown = `

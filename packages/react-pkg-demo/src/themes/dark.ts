@@ -60,9 +60,9 @@ export const darkSyntaxTheme = {
   namespace: { opacity: 0.7 },
 };
 
-export const monoDarkPrismTheme = (color: string): PrismTheme => ({
+export const monoDarkPrismTheme: PrismTheme = {
   plain: {
-    color: color, // theme color for text
+    color: "var(--bg-color)", // theme color for text
     backgroundColor: "#000000",
   },
   styles: [
@@ -81,7 +81,7 @@ export const monoDarkPrismTheme = (color: string): PrismTheme => ({
         "variable",
       ],
       style: {
-        color: color, // theme color for text and comments
+        color: "var(--bg-color)", // theme color for text and comments
       },
     },
     {
@@ -126,7 +126,8 @@ export const monoDarkPrismTheme = (color: string): PrismTheme => ({
       },
     },
   ],
-});
+};
+
 export const monoDarkSyntaxTheme = {
   'code[class*="language-"]': {
     color: "#FFFFFF", // theme color for text
@@ -156,7 +157,7 @@ export const monoDarkSyntaxTheme = {
     overflow: "auto",
     borderRadius: "0.3em",
   },
-  comment: { color: "#FFFFFF" }, // theme color for comments
+  comment: { color: "#808080" }, // theme color for comments
   prolog: { color: "#FFFFFF" }, // theme color for comments
   doctype: { color: "#FFFFFF" }, // theme color for comments
   cdata: { color: "#FFFFFF" }, // theme color for comments
