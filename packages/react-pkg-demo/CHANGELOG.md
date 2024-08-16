@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.7.0
+
+### Minor Changes
+
+- 99c0ce4: style: reduce code highlight
+
 ## 0.6.0
 
 ### Minor Changes
