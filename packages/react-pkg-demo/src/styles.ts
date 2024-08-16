@@ -7,14 +7,13 @@ const styles = (color: string): string => {
     :root {
       --bg-color: ${color};
       --code-color: ${bgInverseTextColor};
-      --heading-font-size: 2.5em;
+      --heading-font-size: 2.5rem;
       --line-height: 140%;
       --link-color: black;
       --link-hover-bg: rgba(255, 255, 255, 0.7);
-      --padding: 0.75rem;
       --panel-bg: rgba(255, 255, 255, 0.4);
+      --lite-border-radius: 0.2rem;
       --panel-border-radius: 0.3rem;
-      --cope-visual-fix-border-radius: 0.2rem;
       --panel-frame-color: #000;
       --text-color: ${bgInverseTextColor};
       --th-color: #fff;
@@ -64,7 +63,7 @@ const styles = (color: string): string => {
 
     th, td {
       border: 1px solid var(--panel-frame-color);
-      padding: var(--padding);
+      padding: 0.75rem;
       text-align: left;
     }
 
@@ -99,17 +98,16 @@ const styles = (color: string): string => {
 
     .inline-code {
       background-color: var(--panel-bg);
-      border-radius: var(--panel-border-radius);
-      padding: var(--panel-border-radius);
-    }
+      border-radius: var(--lite-border-radius);
+     }
 
     .live-preview-container {
       flex: 1;
       font-size: 0.88rem;
       background-color: var(--panel-bg);
       padding: 2em 1em;
-      border-top-left-radius: var(--cope-visual-fix-border-radius);
-      border-top-right-radius: var(--cope-visual-fix-border-radius);
+      border-top-left-radius: var(--lite-border-radius);
+      border-top-right-radius: var(--lite-border-radius);
       border-bottom: 2px solid var(--bg-color);
     }
 
@@ -119,8 +117,8 @@ const styles = (color: string): string => {
       background-color: black;
       padding: 1em;
       border-top: 2px solid var(--bg-color);
-      border-bottom-left-radius: var(--cope-visual-fix-border-radius);
-      border-bottom-right-radius: var(--cope-visual-fix-border-radius);
+      border-bottom-left-radius: var(--lite-border-radius);
+      border-bottom-right-radius: var(--lite-border-radius);
     }
 
     .live-container {
