@@ -21,14 +21,20 @@ export function Composite({
       {markdown ? (
         <ReactMarkdown
           components={{
-            img: (props) => (
-              <img
-                {...props}
-                style={{
-                  maxWidth: "100%",
-                }}
-              />
-            ),
+            img: (props) => {
+              // Check if the alt contains "md-only" it won't be rendered
+              if (props.alt?.includes("md-only")) {
+                return null;
+              }
+              return (
+                <img
+                  {...props}
+                  style={{
+                    maxWidth: "100%",
+                  }}
+                />
+              );
+            },
             pre: "div", // Override pre element to prevent ReactMarkdown from wrapping code blocks in pre tags
             code: ({ node, inline, className, children, ...props }: any) => {
               const match = /language-(\w+)/.exec(className || "");
