@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.8.0
+
+### Minor Changes
+
+- 668e01e: feat: add ability to hide images in web view using md-only
+
 ## 0.7.0
 
 ### Minor Changes
