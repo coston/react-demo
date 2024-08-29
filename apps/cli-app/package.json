@@ -1,0 +1,23 @@
+{
+  "name": "cli-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "demo dev -r ./readme.md --entry ./src/index.js --config '/Users/coston/code/coston/react-pkg-demo/apps/cool/rpd.config.js'",
+    "build": "demo build  -r ./readme.md",
+    "build-pkg": "tsc"
+  },
+  "dependencies": {
+    "rpd-cli": "*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.5.1",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4"
+  }
+}

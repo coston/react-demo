@@ -1,0 +1,12 @@
+{
+  "name": "rpd-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "demo": "./bin/cli.js"
+  },
+  "dependencies": {
+    "commander": "^8.0.0",
+    "next": "^12.0.0"
+  }
+}
