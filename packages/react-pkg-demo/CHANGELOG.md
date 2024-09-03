@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.9.0
+
+### Minor Changes
+
+- 0f702fb: fix: visual contrast and meta description
+
 ## 0.8.0
 
 ### Minor Changes
