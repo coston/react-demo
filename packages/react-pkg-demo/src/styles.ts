@@ -1,28 +1,33 @@
 import { pickTextColorBasedOnBgColorSimple } from "./utils";
 
-const styles = (color: string): string => {
-  const bgInverseTextColor = pickTextColorBasedOnBgColorSimple(color);
+const styles = (themeColor: string): string => {
+  const themeContrastingBWTextColor =
+    pickTextColorBasedOnBgColorSimple(themeColor);
 
+  // todo: make all styles dynamic based on the theme color
   return `
     :root {
-      --bg-color: ${color};
-      --code-color: ${bgInverseTextColor};
+      --theme-color: ${themeColor};
+      --text-color: ${themeContrastingBWTextColor};
+      --code-color: #fff;
+      --code-bg-color: #000;
+      --panel-frame-color: #000;
+      --th-color: #fff;
       --heading-font-size: 2.5rem;
       --line-height: 140%;
       --link-color: black;
-      --link-hover-bg: rgba(255, 255, 255, 0.7);
-      --panel-bg: rgba(255, 255, 255, 0.4);
+      --opaque-bg-strong: rgba(255, 255, 255, 0.7);
+      --opaque-bg-medium: rgba(255, 255, 255, 0.4);
+      --opaque-bg-light: rgba(255, 255, 255, 0.2);
       --lite-border-radius: 0.2rem;
       --panel-border-radius: 0.3rem;
-      --panel-frame-color: #000;
-      --text-color: ${bgInverseTextColor};
-      --th-color: #fff;
+
     }
 
     html {
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       min-height: 100%;
-      background: var(--bg-color);
+      background: var(--theme-color);
       margin: auto;
       max-width: 900px;
       padding: 1em;
@@ -30,11 +35,11 @@ const styles = (color: string): string => {
     }
 
     a {
-      color: var(--link-color);
+      color: var(--text-color);
     }
 
     a:hover {
-      background: var(--link-hover-bg);
+      background: var(--opaque-bg-strong);
     }
 
     h1 {
@@ -47,7 +52,7 @@ const styles = (color: string): string => {
 
     code {
       font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-      background: var(--panel-bg);
+      background: var(--code-bg-color);
       color: var(--code-color);
       word-wrap: break-word;
     }
@@ -58,7 +63,7 @@ const styles = (color: string): string => {
 
     table {
       border-collapse: collapse;
-      background: var(--panel-bg);
+      background: var(--opaque-bg-medium);
     }
 
     th, td {
@@ -87,9 +92,9 @@ const styles = (color: string): string => {
       position: absolute;
       top: 10px;
       right: 10px;
-      background: rgba(255, 255, 255, 0.2);
+      background: var(--opaque-bg-light);
       border: none;
-      color: #fff;
+      color: var(--code-color);
       padding: 5px 10px;
       border-radius: 5px;
       cursor: pointer;
@@ -97,18 +102,18 @@ const styles = (color: string): string => {
     }
 
     .inline-code {
-      background-color: var(--panel-bg);
+      background-color: var(--code-bg-color);
       border-radius: var(--lite-border-radius);
      }
 
     .live-preview-container {
       flex: 1;
       font-size: 0.88rem;
-      background-color: var(--panel-bg);
+      background-color: var(--opaque-bg-medium);
       padding: 2em 1em;
       border-top-left-radius: var(--lite-border-radius);
       border-top-right-radius: var(--lite-border-radius);
-      border-bottom: 2px solid var(--bg-color);
+      border-bottom: 2px solid var(--theme-color);
     }
 
     .live-editor-container {
@@ -116,7 +121,7 @@ const styles = (color: string): string => {
       font-size: 0.88rem;
       background-color: black;
       padding: 1em;
-      border-top: 2px solid var(--bg-color);
+      border-top: 2px solid var(--theme-color);
       border-bottom-left-radius: var(--lite-border-radius);
       border-bottom-right-radius: var(--lite-border-radius);
     }

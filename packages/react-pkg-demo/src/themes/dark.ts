@@ -2,8 +2,8 @@ import { PrismTheme } from "prism-react-renderer";
 
 export const darkSyntaxTheme = {
   'code[class*="language-"]': {
-    color: "#ffffff",
-    background: "#000",
+    color: "var(--code-color)",
+    background: "var(--code-bg-color)",
     lineHeight: "1.5",
     direction: "ltr",
     textAlign: "left",
@@ -14,8 +14,8 @@ export const darkSyntaxTheme = {
     hyphens: "none",
   },
   'pre[class*="language-"]': {
-    color: "#ffffff",
-    background: "#000",
+    color: "var(--code-color)",
+    background: "var(--code-bg-color)",
     lineHeight: "1.5",
     direction: "ltr",
     textAlign: "left",
@@ -62,8 +62,8 @@ export const darkSyntaxTheme = {
 
 export const monoDarkPrismTheme: PrismTheme = {
   plain: {
-    color: "var(--bg-color)", // theme color for text
-    backgroundColor: "#000000",
+    color: "var(--code-color)", // theme color for text
+    backgroundColor: "var(--code-bg-color)",
   },
   styles: [
     {
@@ -74,20 +74,19 @@ export const monoDarkPrismTheme: PrismTheme = {
         "string",
         "boolean",
         "number",
-        "constant",
         "symbol",
         "regex",
         "char",
         "variable",
       ],
       style: {
-        color: "var(--bg-color)", // theme color for text and comments
+        color: "var(--theme-color)", // theme color for text and comments
       },
     },
     {
-      types: ["punctuation", "property", "attr-value", "inserted", "comment"],
+      types: ["punctuation", "attr-value", "inserted", "comment"],
       style: {
-        color: "#6c6783", // grey for brackets and similar elements
+        color: "#969696", // grey for brackets and similar elements
       },
     },
     {
@@ -102,9 +101,11 @@ export const monoDarkPrismTheme: PrismTheme = {
         "url",
         "attr-name",
         "builtin",
+        "property",
+        "constant",
       ],
       style: {
-        color: "#ffffff", // white for tags
+        color: "var(--code-color)", // white for tags
       },
     },
     {
@@ -130,8 +131,8 @@ export const monoDarkPrismTheme: PrismTheme = {
 
 export const monoDarkSyntaxTheme = {
   'code[class*="language-"]': {
-    color: "#FFFFFF", // theme color for text
-    background: "#000000",
+    color: "var(--code-color)", // theme color for text
+    background: "var(--code-bg-color)",
     lineHeight: "1.5",
     direction: "ltr",
     textAlign: "left",
@@ -142,8 +143,8 @@ export const monoDarkSyntaxTheme = {
     hyphens: "none",
   },
   'pre[class*="language-"]': {
-    color: "#FFFFFF", // theme color for text
-    background: "#000000",
+    color: "var(--code-color)", // theme color for text
+    background: "var(--code-bg-color)",
     lineHeight: "1.5",
     direction: "ltr",
     textAlign: "left",
@@ -158,31 +159,31 @@ export const monoDarkSyntaxTheme = {
     borderRadius: "0.3em",
   },
   comment: { color: "#808080" }, // theme color for comments
-  prolog: { color: "#FFFFFF" }, // theme color for comments
-  doctype: { color: "#FFFFFF" }, // theme color for comments
-  cdata: { color: "#FFFFFF" }, // theme color for comments
+  prolog: { color: "var(--code-color)" }, // theme color for comments
+  doctype: { color: "var(--code-color)" }, // theme color for comments
+  cdata: { color: "var(--code-color)" }, // theme color for comments
   punctuation: { color: "#808080" }, // grey for brackets and similar elements
   property: { color: "#808080" }, // grey for brackets and similar elements
-  tag: { color: "#ffffff" }, // white for tags
-  boolean: { color: "#FFFFFF" }, // theme color for text
-  number: { color: "#FFFFFF" }, // theme color for text
-  constant: { color: "#FFFFFF" }, // theme color for text
-  symbol: { color: "#FFFFFF" }, // theme color for text
-  selector: { color: "#ffffff" }, // white for tags
-  "attr-name": { color: "#ffffff" }, // white for tags
-  string: { color: "#FFFFFF" }, // theme color for text
-  char: { color: "#FFFFFF" }, // theme color for text
-  builtin: { color: "#ffffff" }, // white for tags
-  operator: { color: "#ffffff" }, // white for tags
-  entity: { color: "#ffffff", cursor: "help" }, // white for tags
-  url: { color: "#ffffff" }, // white for tags
+  tag: { color: "var(--code-color)" }, // white for tags
+  boolean: { color: "var(--code-color)" }, // theme color for text
+  number: { color: "var(--code-color)" }, // theme color for text
+  constant: { color: "var(--code-color)" }, // theme color for text
+  symbol: { color: "var(--code-color)" }, // theme color for text
+  selector: { color: "var(--code-color)" }, // white for tags
+  "attr-name": { color: "var(--code-color)" }, // white for tags
+  string: { color: "var(--code-color)" }, // theme color for text
+  char: { color: "var(--code-color)" }, // theme color for text
+  builtin: { color: "var(--code-color)" }, // white for tags
+  operator: { color: "var(--code-color)" }, // white for tags
+  entity: { color: "var(--code-color)", cursor: "help" }, // white for tags
+  url: { color: "var(--code-color)" }, // white for tags
   "attr-value": { color: "#808080" }, // grey for brackets and similar elements
-  keyword: { color: "#ffffff" }, // white for tags
-  regex: { color: "#FFFFFF" }, // theme color for text
-  important: { color: "#ffffff", fontWeight: "bold" }, // white for tags
-  variable: { color: "#FFFFFF" }, // theme color for text
-  inserted: { color: "#FFFFFF" }, // theme color for text
-  deleted: { color: "#ffffff" }, // white for tags
+  keyword: { color: "var(--code-color)" }, // white for tags
+  regex: { color: "var(--code-color)" }, // theme color for text
+  important: { color: "var(--code-color)", fontWeight: "bold" }, // white for tags
+  variable: { color: "var(--code-color)" }, // theme color for text
+  inserted: { color: "var(--code-color)" }, // theme color for text
+  deleted: { color: "var(--code-color)" }, // white for tags
   italic: { fontStyle: "italic" },
   bold: { fontWeight: "bold" },
   namespace: { opacity: 0.7 },

@@ -11,13 +11,19 @@ import rehypeSlug from "rehype-slug";
 export function Composite({
   color,
   packageName,
+  description,
   markdown,
   icon,
   scope,
 }: Omit<LiveSectionTypes, "code"> &
   Omit<LayoutTypes, "children"> & { markdown?: string }): JSX.Element {
   return (
-    <Layout color={color} icon={icon} packageName={packageName}>
+    <Layout
+      icon={icon}
+      color={color}
+      packageName={packageName}
+      description={description}
+    >
       {markdown ? (
         <ReactMarkdown
           components={{
@@ -37,8 +43,7 @@ export function Composite({
             },
             pre: "div", // Override pre element to prevent ReactMarkdown from wrapping code blocks in pre tags
             code: ({ node, inline, className, children, ...props }: any) => {
-              const match = /language-(\w+)/.exec(className || "");
-              const language = match ? match[1] : "";
+              const language = className?.match(/language-(\w+)/)?.[1] || "";
               const code = String(children).replace(/\n$/, "");
 
               if (node.position.start.line === node.position.end.line) {
