@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.10.0
+
+### Minor Changes
+
+- 60b7f85: style: use light inline code backgrounds
+
 ## 0.9.0
 
 ### Minor Changes
