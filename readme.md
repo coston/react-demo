@@ -44,13 +44,13 @@ npm i react-pkg-demo -D
 
 ## Properties
 
-| Property    | Type   | Requirement | Description                                     |
-| ----------- | ------ | ----------- | ----------------------------------------------- |
-| packageName | string | required    | Name of package being demonstrated              |
-| color       | string | required    | Theme color                                     |
-| scope       | Object | optional    | Any component in the demo code                  |
-| icon        | string | optional    | Decorative icon                                 |
-| markdown    | string | optional    | Markdown content (e.g. copied from your readme) |
+| Property    | Type     | Requirement | Description                                     |
+| ----------- | -------- | ----------- | ----------------------------------------------- |
+| packageName | `string` | required    | Name of package being demonstrated              |
+| color       | `string` | required    | Theme color                                     |
+| scope       | `object` | optional    | Any component in the demo code                  |
+| icon        | `string` | optional    | Decorative icon                                 |
+| markdown    | `string` | optional    | Markdown content (e.g. copied from your readme) |
 
 ## Contributing
 

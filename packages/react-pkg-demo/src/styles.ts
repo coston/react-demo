@@ -11,14 +11,13 @@ const styles = (themeColor: string): string => {
       --text-color: ${themeContrastingBWTextColor};
       --code-color: #fff;
       --code-bg-color: #000;
-      --panel-frame-color: #000;
       --th-color: #fff;
-      --heading-font-size: 2.5rem;
-      --line-height: 140%;
-      --link-color: black;
-      --opaque-bg-strong: rgba(255, 255, 255, 0.7);
+      --link-color: #000;
+      --panel-frame-color: #000;
+       --opaque-bg-strong: rgba(255, 255, 255, 0.7);
       --opaque-bg-medium: rgba(255, 255, 255, 0.4);
       --opaque-bg-light: rgba(255, 255, 255, 0.2);
+      --heading-font-size: 2.5rem;
       --lite-border-radius: 0.2rem;
       --panel-border-radius: 0.3rem;
 
@@ -58,7 +57,7 @@ const styles = (themeColor: string): string => {
     }
 
     ul li, ol li {
-      line-height: var(--line-height);
+      line-height: 140%;
     }
 
     table {
@@ -102,7 +101,8 @@ const styles = (themeColor: string): string => {
     }
 
     .inline-code {
-      background-color: var(--code-bg-color);
+      color: var(--text-color);
+      background-color: var(--opaque-bg-medium);
       border-radius: var(--lite-border-radius);
      }
 
