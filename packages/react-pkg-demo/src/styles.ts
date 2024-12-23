@@ -8,7 +8,14 @@ const styles = (themeColor: string): string => {
   return `
     :root {
       --theme-color: ${themeColor};
-      --text-color: ${themeContrastingBWTextColor};
+      --heading-font-size: 2.5rem;
+      --lite-border-radius: 0.2rem;
+      --panel-border-radius: 0.3rem;
+
+    }
+
+     [data-theme="light"] {
+       --text-color: ${themeContrastingBWTextColor};
       --code-color: #fff;
       --code-bg-color: #000;
       --th-color: #fff;
@@ -17,12 +24,18 @@ const styles = (themeColor: string): string => {
        --opaque-bg-strong: rgba(255, 255, 255, 0.7);
       --opaque-bg-medium: rgba(255, 255, 255, 0.4);
       --opaque-bg-light: rgba(255, 255, 255, 0.2);
-      --heading-font-size: 2.5rem;
-      --lite-border-radius: 0.2rem;
-      --panel-border-radius: 0.3rem;
-
     }
-
+ [data-theme="dark"] {
+      --text-color: #fff;
+       --code-color: #fff;
+      --code-bg-color: rgba(255, 255, 255, 0.2);
+      --th-color: #fff;
+      --link-color: #000;
+      --panel-frame-color: rgba(255, 255, 255, 0.2);
+       --opaque-bg-strong: rgba(255, 255, 255, 0.7);
+      --opaque-bg-medium: rgba(255, 255, 255, 0.4);
+      --opaque-bg-light: rgba(255, 255, 255, 0.2);
+    }
     html {
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       min-height: 100%;

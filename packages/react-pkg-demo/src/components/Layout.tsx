@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles";
+import { pickTextColorBasedOnBgColorSimple } from "../utils";
 
 function Layout({
   children,
@@ -9,6 +10,14 @@ function Layout({
   color,
 }: LayoutTypes): JSX.Element {
   const metaDescription = description || `The ${packageName} package`;
+
+
+  const themeContrastingBWTextColor = pickTextColorBasedOnBgColorSimple(color);
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const isDarkTheme = themeContrastingBWTextColor === '#fff';
+  if (!currentTheme) {
+    document.documentElement.setAttribute('data-theme', isDarkTheme ? 'dark' : 'light');
+  }
   return (
     <>
       <title>{packageName}</title>

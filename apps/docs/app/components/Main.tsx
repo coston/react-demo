@@ -8,7 +8,7 @@ function Button({ ...rest }) {
 }
 
 function HomePage({ content }: { content: string }) {
-  const color = "#CBC3E3";
+  const color = "#999999";
 
   return (
     <Demo

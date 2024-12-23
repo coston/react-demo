@@ -32,7 +32,7 @@ npm i react-pkg-demo -D
   `;
   return (
     <Demo
-      color={"#888"}
+      color={"#999999"}
       packageName={"react-pkg-demo"}
       icon={"⬇️"}
       scope={{ Button, Demo }}
