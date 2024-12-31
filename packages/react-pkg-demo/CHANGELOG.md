@@ -1,5 +1,11 @@
 # react-pkg-demo
 
+## 0.11.0
+
+### Minor Changes
+
+- 4fc8a36: react 19 support
+
 ## 0.10.0
 
 ### Minor Changes
